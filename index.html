@@ -12,29 +12,28 @@
         }
     </style>
 </head>
-<nav class="flex items-center justify-between flex-wrap py-6">
-    <div class="flex items-center mr-6">
-        <span class="text-xl font-bold">ERPNext Status Page</span>
-    </div>
-    <div class="block lg:hidden">
-        <button
-            class="flex items-center px-3 py-2 border rounded text-grey-darkest border-grey-darkest hover:text-grey-dark hover:text-grey-dark">
-            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <title>Menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-        </button>
-    </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div class="text-sm lg:flex-grow">
+<nav class="flex items-center justify-between flex-wrap py-6 px-2">
+    <div class="flex items-center">
+        <span class="items-center text-xl font-bold mr-6">ERPNext Status</span>
+        <div class="items-center text-sm flex-grow">
             <a href="#responsive-header"
-                class="block mt-4 lg:inline-block lg:mt-0 no-underline text-grey-darkest mr-4">
+                class="block no-underline text-grey-darkest mr-4">
                 GitHub
             </a>
+        </div>
+        <div class="text-sm flex-grow">
             <a href="#responsive-header"
-                class="block mt-4 lg:inline-block lg:mt-0 no-underline text-grey-darkest mr-4">
+                class="block no-underline text-grey-darkest mr-4">
                 Discuss
             </a>
+        </div>
+    </div>
+    <div class="w-full mt-5 md:mt-0 md:w-auto">
+        <div class="text-center">
+            <div class="p-2 bg-red-lightest border-red items-center leading-none rounded-full flex inline-flex" role="alert">
+                <span class="flex rounded-full bg-red uppercase text-white px-2 py-1 text-xs font-bold mr-3">Alert</span>
+                <span class="mr-2 text-left flex-auto text-red">Some Systems may be down</span>
+            </div>
         </div>
     </div>
 </nav>
@@ -42,8 +41,8 @@
 <body class="container mx-auto px-3" style="max-width: 1024px;">
     <div class="flex flex-wrap -mx-2">
         <div class="w-full md:w-1/4 px-3 py-2">
-            <div class="p-3 border border-gray-400 rounded">
-                <div class="text-gray-900 flex text-2xl font-semibold">
+            <div class="p-3 flex justify-between border border-gray-400 rounded">
+                <div class="text-gray-900 flex text-xl font-semibold">
                     <span class="self-center mr-2">
                         <i class="w-5" data-feather="server"></i>
                     </span>
@@ -51,11 +50,14 @@
                         Servers
                     </span>
                 </div>
+                <div class="self-center">
+                    <i class="w-5 text-green" data-tooltip="I am a tooltip" data-feather="check"></i>
+                </div>
             </div>
         </div>
         <div class="w-full md:w-1/4 px-3 py-2">
-            <div class="p-3 border border-gray-400 rounded">
-                <div class="text-gray-900 flex text-2xl font-semibold">
+            <div class="p-3 flex justify-between border border-gray-400 rounded">
+                <div class="text-gray-900 flex text-xl font-semibold">
                     <span class="self-center mr-2">
                         <i class="w-5" data-feather="mail"></i>
                     </span>
@@ -63,11 +65,14 @@
                         Mail
                     </span>
                 </div>
+                <div class="self-center">
+                    <i class="w-5 text-orange" data-feather="x-circle"></i>
+                </div>
             </div>
         </div>
         <div class="w-full md:w-1/4 px-3 py-2">
-            <div class="p-3 border border-gray-400 rounded">
-                <div class="text-gray-900 flex text-2xl font-semibold">
+            <div class="p-3 flex justify-between border border-gray-400 rounded">
+                <div class="text-gray-900 flex text-xl font-semibold">
                     <span class="self-center mr-2">
                         <i class="w-5" data-feather="download"></i>
                     </span>
@@ -75,17 +80,48 @@
                         Backups
                     </span>
                 </div>
+                <div class="self-center">
+                    <i class="w-5 text-orange" data-feather="x-circle"></i>
+                </div>
             </div>
         </div>
         <div class="w-full md:w-1/4 px-3 py-2">
-            <div class="p-3 border border-gray-400 rounded">
-                <div class="text-gray-900 flex text-2xl font-semibold">
+            <div class="p-3 flex justify-between border border-gray-400 rounded">
+                <div class="text-gray-900 flex text-xl font-semibold">
                     <span class="self-center mr-2">
                         <i class="w-5" data-feather="link"></i>
                     </span>
                     <span class="self-center">
                         Proxy
                     </span>
+                </div>
+                <div class="self-center">
+                    <i class="w-5 text-orange" data-feather="x-circle"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-10 px-2">
+        <div>
+            <span class="text-xl font-bold">Past Incidents</span>
+            <div class="w-full mt-5">
+                <div class="p-3 border border-gray-400 rounded">
+                    <div class="text-gray-900 text-xl font-semibold">
+                        February 21, 2019
+                    </div>
+                    <p class="text-sm font-thin text-grey-darker mt-3">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                    </p>
+                </div>
+            </div>
+            <div class="w-full mt-5">
+                <div class="p-3 border border-gray-400 rounded">
+                    <div class="text-gray-900 text-xl font-semibold">
+                        January 12, 2019
+                    </div>
+                    <p class="text-sm font-thin text-grey-darker mt-3">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                    </p>
                 </div>
             </div>
         </div>
